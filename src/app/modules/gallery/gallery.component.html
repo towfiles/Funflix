@@ -1,0 +1,15 @@
+<div fxLayout="row wrap" fxLayoutGap="0.5%" fxLayoutAlign="center">
+    <mat-card fxFlex="22%"
+              fxFlex.lt-md="50%"
+              fxFlex.lt-sm="100%" class="card-picture" *ngFor="let movie of movieList">
+        <mat-card-title fxLayout="column">
+            <img mat-card-image [src]="imageDir + '/' + movie.img">
+            <span fxFlex="80%">{{movie.description}}</span>
+            <mat-icon fxFlex="10%">mode_edit</mat-icon>
+            <mat-icon fxFlex="10%">delete</mat-icon>
+
+        </mat-card-title>
+    </mat-card>
+
+
+</div>

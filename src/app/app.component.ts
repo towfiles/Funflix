@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import {GalleryComponent} from './modules/gallery/gallery.component';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,5 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'Funflix2';
+  title = 'FunFlix';
 }
