@@ -1,0 +1,19 @@
+.mat-toolbar {
+    position: fixed;
+    z-index: 10000;
+    background: black;
+    color: whitesmoke;
+    opacity: 0.93;
+    box-shadow: 0px 33px 27px 15px black;
+    height: 20%;
+
+}
+
+.mat-toolbar span {
+    font-family: 'Eczar', serif;
+    margin: 0 auto;
+    font-style: italic;
+    font-size: 51px;
+    font-weight: 400;
+    color: beige;
+}

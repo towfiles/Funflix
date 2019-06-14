@@ -1,7 +1,7 @@
 import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import {GalleryComponent} from './gallery.component';
-import { MatCardModule, MatIconModule, MatToolbarModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
+import { MatCardModule, MatButtonModule, MatFormFieldModule, MatInputModule } from '@angular/material';
 import {BrowserAnimationsModule} from '@angular/platform-browser/animations';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
@@ -10,8 +10,6 @@ import { FlexLayoutModule } from '@angular/flex-layout';
     CommonModule,
       BrowserAnimationsModule,
       MatCardModule,
-      MatIconModule,
-      MatToolbarModule,
       MatButtonModule,
       MatFormFieldModule,
       MatInputModule,

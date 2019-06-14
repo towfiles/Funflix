@@ -1,0 +1,36 @@
+
+.mat-card {
+    padding: 3%;
+    padding-bottom: 0;
+    margin-bottom: 0.5%;
+}
+
+
+.mat-card-image {
+    border-radius: 3px;
+}
+
+
+
+mat-card div.overlay-movie{
+    text-align: center;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: black;
+    opacity: 0.8;
+    top: 0;
+    left:0;
+    right:0;
+    color: white;
+    visibility:hidden;
+}
+
+mat-card:hover div.overlay-movie{
+    visibility: visible;
+
+}
+
+.overlay-movie div {
+    padding: 10px;
+}

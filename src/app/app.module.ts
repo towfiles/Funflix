@@ -5,6 +5,7 @@ import {HttpClientModule} from '@angular/common/http';
 import { AppComponent } from './app.component';
 import {GalleryModule} from './modules/gallery/gallery.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import {MatToolbar, MatIconModule} from '@angular/material';
 
 
 //services
@@ -12,13 +13,16 @@ import {MoviesService} from './services/movies.service';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+      MatToolbar
   ],
   imports: [
     BrowserModule,
       HttpClientModule,
       FlexLayoutModule,
-      GalleryModule
+      GalleryModule,
+      MatIconModule
+
 
   ],
   providers: [MoviesService],
