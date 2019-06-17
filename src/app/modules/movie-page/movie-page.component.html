@@ -1,0 +1,53 @@
+
+  <mat-card class="movie-container">
+    <div fxLayout="row wrap" fxLayoutGap="5%" fxLayoutAlign="space-between ">
+
+
+      <div fxFlex="20%"
+           fxFlex.lt-sm="100%"
+           fxFlex.lt-md="100%">
+        <mat-card class="card-picture">
+          <img mat-card-image [src]="imageDir + '/' + movieData.img">
+        </mat-card>
+      </div>
+
+      <div class="movie-content" fxFlex="70%"
+           fxFlex.lt-sm="100%"
+           fxFlex.lt-md="100%">
+        <mat-card-title class="primary-text">{{movieData.name}}</mat-card-title>
+
+        <mat-divider class="divider"></mat-divider>
+
+        <mat-card-content class="secondary-text">
+          {{movieData.description}}
+        </mat-card-content>
+
+        <mat-divider class="divider"></mat-divider>
+
+        <mat-card-content class="secondary-text">
+          <mat-chip-list>
+            <mat-chip *ngFor="let genre of movieData.genres">{{genre}}</mat-chip>
+          </mat-chip-list>
+        </mat-card-content>
+
+        <mat-divider class="divider"></mat-divider>
+
+        <mat-card-content>
+          <span>{{movieData.length}}</span>
+          <span class="separator">|</span>
+
+          <span>
+                <button class="rate-number" mat-mini-fab color="primary">{{movieData.rate}}</button></span>
+        </mat-card-content>
+
+        <mat-card-content class="secondary-text">
+          <button class="back-button" (click)="GoBackToPreviousPage()" mat-stroked-button color="primary">
+            <mat-icon>keyboard_backspace</mat-icon> Go back </button>
+        </mat-card-content>
+
+
+      </div>
+    </div>
+
+
+  </mat-card>

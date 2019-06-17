@@ -3,9 +3,15 @@ import { NgModule } from '@angular/core';
 import {HttpClientModule} from '@angular/common/http';
 
 import { AppComponent } from './app.component';
-import {GalleryModule} from './modules/gallery/gallery.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import {MatToolbar, MatIconModule} from '@angular/material';
+import {SearchModule} from './modules/search/search.module';
+import {AppRouteModule} from './app-route.module';
+
+
+
+import {GalleryModule} from './modules/gallery/gallery.module';
+
 
 
 //services
@@ -21,7 +27,9 @@ import {MoviesService} from './services/movies.service';
       HttpClientModule,
       FlexLayoutModule,
       GalleryModule,
-      MatIconModule
+      MatIconModule,
+      AppRouteModule,
+      SearchModule
 
 
   ],

@@ -1,0 +1,56 @@
+.mat-form-field input {
+    font-size: 0.68em;
+
+}
+
+
+.search-container {
+    position: fixed;
+    right: 0;
+    left: 0;
+    height: 100%;
+    top: 0;
+    bottom: 0;
+    z-index: 1000000;
+    background-color: black;
+    opacity: 0.8;
+    visibility: hidden;
+}
+
+.search-input{
+    width: 50%;
+    height: 5%;
+    margin: auto;
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    border: 2px solid cornflowerblue;
+    font-size: 1em;
+}
+
+a .mat-icon {
+    font-size: 1.5rem;
+    color: white;
+    position: relative;
+    transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+}
+
+
+
+a .mat-icon:hover {
+    background-color: transparent;
+    transform: rotate(360deg);
+    cursor: pointer;
+    box-shadow: none;
+}
+
+
+.angular2-multiselect .dropdown-list {
+    color: black;
+}
+
+
+
+

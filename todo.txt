@@ -1,0 +1,9 @@
+-----  add ripple effect when clicking a movie on galary
+----- turn all css to sass
+---- implement loading effect when you first open the page
+------ left logo transition from left to right
+------ clicking on the genre on the movie page should take you to the gallery where you can filter by movie
+------ clicking on popflix icon should take you  to the home page
+------ check transitions on search button
+------ destroy all subscribers
+------ search not covering all the page **fixed
