@@ -7,7 +7,7 @@ import {ActivatedRoute, Router} from '@angular/router';
 @Component({
   selector: 'app-gallery-search-page',
   templateUrl: './gallery-search-page.component.html',
-  styleUrls: ['./gallery-search-page.component.css']
+  styleUrls: ['./gallery-search-page.component.scss']
 })
 export class GallerySearchPageComponent implements OnInit {
 
@@ -26,12 +26,21 @@ export class GallerySearchPageComponent implements OnInit {
 
     }
 
-    public SearchMovies (event){
-        console.log('testing' + event);
-        this._movieService.searchMovies(event).subscribe(response =>
+    public SearchMovies (searchKeyword){
+        this._movieService.searchMovies(searchKeyword).subscribe(response =>
         {
             this.movieList = response;
-            console.log(response);
+
+        });
+    }
+
+    public FilterMovies(filterList){
+        
+        const processedFilterList = filterList.replace(',', '&q=');
+        this._movieService.searchMovies(processedFilterList).subscribe(response =>
+        {
+            this.movieList = response;
+
         });
     }
 
@@ -42,8 +51,16 @@ export class GallerySearchPageComponent implements OnInit {
 
       //get  movies when route changes to page search
       this._activatedRoute.params.subscribe((params) => {
-          if(params.searchKeyword !== undefined && params.searchKeyword !== ''){
-              this.SearchMovies(params.searchKeyword);
+          if(params.searchKeyword !== undefined && params.searchKeyword !== '') {
+            const url: any = this._activatedRoute.parent.url;
+              if(url.value[0].path === 'filter-movies'){
+
+              this.FilterMovies(params.searchKeyword);
+              }
+              else {
+                this.SearchMovies(params.searchKeyword);
+              }
+
 
           }
 

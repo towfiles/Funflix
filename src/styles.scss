@@ -1,0 +1,143 @@
+@import '~@angular/material/prebuilt-themes/deeppurple-amber.css';
+@import url( 'https://fonts.googleapis.com/css?family=Roboto:400,700|Material+Icons');
+html, body {
+	height: 100%;
+	min-height: 100%;
+	margin: 0;
+}
+body {
+	margin: 0;
+	font-family: 'Raleway', sans-serif;
+	color: whitesmoke;
+	width: 100%;
+}
+html {
+	background: url('./assets/images/background.jpg') no-repeat center center fixed;
+	-webkit-background-size: cover;
+	-moz-background-size: cover;
+	-o-background-size: cover;
+	background-size: cover;
+}
+.primary-text {
+	color: whitesmoke;
+	font-size: 1vw;
+	font-family: 'Raleway', sans-serif;
+}
+.secondary-text {
+	font-size: 0.9vw;
+	color: lightgoldenrodyellow;
+	font-family: 'Raleway', sans-serif;
+}
+.separator {
+	color: #BDBDBD;
+}
+.divider {
+	position: relative !important;
+	padding-top: 3%;
+	color: #BDBDBD;
+}
+.back-button {
+	color: navajowhite !important;
+}
+button {
+	span {
+		.material-icons {
+			position: relative;
+			transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+			&:hover {
+				background-color: transparent;
+				transform: rotate(360deg);
+				cursor: pointer;
+				box-shadow: none;
+			}
+		}
+	}
+}
+a {
+	.mat-icon {
+		font-size: 1.5rem;
+		color: white;
+		position: relative;
+		transition: color 0.2s ease, background-color 0.2s ease, transform 0.3s ease;
+		&:hover {
+			background-color: transparent;
+			transform: rotate(360deg);
+			cursor: pointer;
+			box-shadow: none;
+		}
+	}
+}
+
+
+.card-picture {
+	padding: 16.5% !important;
+	padding-bottom: 0 !important;
+	box-shadow: 3px 3px 20px 13px rgba(0,0,0,.2), 0 2px 2px 0 rgba(0,0,0,.14), 0 1px 5px 0 rgba(0,0,0,.12) !important;
+}
+mat-card {
+	div {
+		&.overlay-movie {
+			text-align: center;
+			position: absolute;
+			height: 80%;
+			background-color: black;
+			opacity: 0.8;
+			top: 0;
+			left: 0;
+			right: 0;
+			color: white;
+			visibility: hidden;
+		}
+	}
+	&:hover {
+		div {
+			&.overlay-movie {
+				visibility: visible;
+				cursor: pointer;
+			}
+		}
+	}
+}
+.overlay-movie {
+	padding: 10px;
+}
+.rate-number {
+	background-color: goldenrod !important;
+	font-size: 0.9vw !important;
+}
+.movie-container {
+	width: 77%;
+	margin: 0 auto;
+	padding: 3%;
+	margin-bottom: 5%;
+	background-image: url('./assets/images/blurred.png');
+	background-position: left top;
+	background-repeat: space;
+	background-attachment: fixed;
+	background-size: 0.1%;
+	background-color: transparent;
+}
+.card-body {
+	margin: 2%;
+}
+.dropdown-list {
+	color: black;
+}
+
+.selected-list {
+	.c-list {
+		.c-token {
+			padding: 2px 19px 2px 0px !important;
+		}
+	}
+}
+
+span {
+	a {
+		text-decoration: none;
+		color: inherit;
+		cursor: pointer;
+	}
+}
+
+

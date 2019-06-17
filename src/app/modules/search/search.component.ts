@@ -7,12 +7,13 @@ import {Component,
 import { Router } from '@angular/router';
 import {ElementDef} from '@angular/core/src/view';
 import {FormControl} from '@angular/forms';
+import {GenreType} from '../../enums/genre-type.enum';
 
 
 @Component({
   selector: 'app-search',
   templateUrl: './search.component.html',
-  styleUrls: ['./search.component.css']
+  styleUrls: ['./search.component.scss']
 })
 export class SearchComponent implements AfterViewInit, OnInit {
 
@@ -27,11 +28,17 @@ export class SearchComponent implements AfterViewInit, OnInit {
 
       this.searchContainer.nativeElement.style.visibility  =
           (!isTrue && event.srcElement.className !== 'search-input')  ? 'hidden' : 'visible';
+          if (isTrue) {
+            this.searchContainer.nativeElement.style.visibility  = 'visible';
+            this.isHidden = (event.srcElement.id === 'filter_list');
+          }
+          else if(event.srcElement.className == 'search-container'){
+            this.searchContainer.nativeElement.style.visibility  = 'hidden';
+          }
+          else {
+            this.searchContainer.nativeElement.style.visibility  = 'visible';
+          }
 
-      console.log(event.srcElement);
-
-
-      this.isHidden = (event.srcElement.id === 'filter_list');
 
 
       const element: any = document.getElementsByClassName('search-input')[0];
@@ -47,6 +54,19 @@ export class SearchComponent implements AfterViewInit, OnInit {
     //navigate to gallery in other to search movies
     this._router.navigate(['find-movies', event.target.value]);
 
+  }
+
+  public FilterByGenre() {
+      if(this.dropdownList !== undefined && this.dropdownList.length > 0){
+
+        let listOfGenres = [];
+
+        this.selectedItems.forEach(function(element){
+          listOfGenres.push(element.itemName);
+        });
+  
+          this._router.navigate(['filter-movies', listOfGenres.join(',')]);
+      }
   }
 
 
@@ -82,19 +102,10 @@ export class SearchComponent implements AfterViewInit, OnInit {
 
     ngOnInit() {
 
+        Object.keys(GenreType).map(key => {
+            this.dropdownList.push({"id": key,"itemName": GenreType[key]});
+        });
 
-        this.dropdownList = [
-            {"id":1,"itemName":"India"},
-            {"id":2,"itemName":"Singapore"},
-            {"id":3,"itemName":"Australia"},
-            {"id":4,"itemName":"Canada"},
-            {"id":5,"itemName":"South Korea"},
-            {"id":6,"itemName":"Germany"},
-            {"id":7,"itemName":"France"},
-            {"id":8,"itemName":"Russia"},
-            {"id":9,"itemName":"Italy"},
-            {"id":10,"itemName":"Sweden"}
-        ];
 
 
 
@@ -104,7 +115,7 @@ export class SearchComponent implements AfterViewInit, OnInit {
             selectAllText:'Select All',
             unSelectAllText:'UnSelect All',
             enableSearchFilter: true,
-            classes:"search-input"
+            classes:""
         };
 
 

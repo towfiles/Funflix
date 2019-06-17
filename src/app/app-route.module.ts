@@ -12,6 +12,7 @@ import {GallerySearchPageModule} from './modules/gallery/gallery-search-page/gal
             { path: '', component: GalleryComponent, pathMatch: 'full' },
             { path: 'movie-page/:id', loadChildren: './modules/movie-page/movie-page.module#MoviePageModule' },
             { path: 'find-movies/:searchKeyword', loadChildren: './modules/gallery/gallery-search-page/gallery-search-page.module#GallerySearchPageModule'},
+            { path: 'filter-movies/:searchKeyword', loadChildren: './modules/gallery/gallery-search-page/gallery-search-page.module#GallerySearchPageModule'},
             { path: '**', redirectTo: ''}
         ])
     ],

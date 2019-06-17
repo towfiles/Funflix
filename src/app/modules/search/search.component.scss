@@ -1,0 +1,42 @@
+.mat-form-field {
+	input {
+		font-size: 0.68em;
+	}
+}
+.search-container {
+	position: fixed;
+	right: 0;
+	left: 0;
+	height: 100%;
+	top: 0;
+	bottom: 0;
+	z-index: 1000000;
+	background-color: black;
+	opacity: 0.8;
+	visibility: hidden;
+}
+.search-input {
+	width: 50%;
+	margin: auto;
+	position: absolute;
+	left: 0;
+	bottom: 50%;
+	right: 0;
+	font-size: 1em;
+	input {
+		width: 100%;
+		height: 29px;
+		background-color: inherit;
+		border: 2px solid cornflowerblue;
+		color: white;
+	}
+}
+angular2-multiselect {
+	float: left;
+	width: 90%;
+	border: 2px solid cornflowerblue;
+}
+.filter-icon {
+	padding: 7px;
+	float: right;
+}
