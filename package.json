@@ -3,7 +3,9 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "json-server --watch ./src/assets/data/movie.mock-data.json & ng serve",
+    "server": "json-server --watch ./src/assets/data/movie.mock-data.json",
+    "start": "server & ng serve",
+    "start-win": "start npm run server && start npm run ng serve",
     "build": "ng build",
     "test": "ng test",
     "lint": "ng lint",
