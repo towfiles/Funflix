@@ -32,7 +32,7 @@ export class SearchComponent implements AfterViewInit, OnInit {
             this.searchContainer.nativeElement.style.visibility  = 'visible';
             this.isHidden = (event.srcElement.id === 'filter_list');
           }
-          else if(event.srcElement.className == 'search-container'){
+          else if(event.srcElement.className === 'search-container'){
             this.searchContainer.nativeElement.style.visibility  = 'hidden';
           }
           else {
@@ -41,7 +41,7 @@ export class SearchComponent implements AfterViewInit, OnInit {
 
 
 
-      const element: any = document.getElementsByClassName('search-input')[0];
+      const element: any = document.getElementsByTagName('input')[0];
       //ocument.body.style.filter = 'blur(8px)';
       element.focus();
 
@@ -83,18 +83,12 @@ export class SearchComponent implements AfterViewInit, OnInit {
 
 
     onItemSelect(item:any){
-        console.log(item);
-        console.log(this.selectedItems);
     }
     OnItemDeSelect(item:any){
-        console.log(item);
-        console.log(this.selectedItems);
     }
     onSelectAll(items: any){
-        console.log(items);
     }
     onDeSelectAll(items: any){
-        console.log(items);
     }
 
 

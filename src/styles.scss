@@ -79,7 +79,7 @@ mat-card {
 		&.overlay-movie {
 			text-align: center;
 			position: absolute;
-			height: 80%;
+			height: 92%;
 			background-color: black;
 			opacity: 0.8;
 			top: 0;
@@ -137,6 +137,14 @@ span {
 		text-decoration: none;
 		color: inherit;
 		cursor: pointer;
+	}
+}
+
+
+
+@media (max-width: 599px) {
+	.mat-toolbar-row, .mat-toolbar-single-row {
+		height: 46px !important;
 	}
 }
 

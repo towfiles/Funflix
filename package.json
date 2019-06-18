@@ -4,7 +4,7 @@
   "scripts": {
     "ng": "ng",
     "server": "json-server --watch ./src/assets/data/movie.mock-data.json",
-    "start": "server & ng serve",
+    "start": "npm run server & ng serve",
     "start-win": "start npm run server && start npm run ng serve",
     "build": "ng build",
     "test": "ng test",
