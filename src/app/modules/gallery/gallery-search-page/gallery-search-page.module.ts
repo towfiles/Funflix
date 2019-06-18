@@ -21,6 +21,5 @@ import {GallerySearchPageRouteModule} from './gallery-search-page-route.module';
 })
 export class GallerySearchPageModule {
     constructor(){
-        console.log('here okas');
     }
 }

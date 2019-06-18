@@ -33,7 +33,6 @@ export class MoviePageComponent implements OnInit {
   GetMovieDetails(movieId: number){
     this._movieService.getMovieById(movieId).subscribe((response) => {
         this.movieData = response;
-        console.log(response);
 
     });
   }
